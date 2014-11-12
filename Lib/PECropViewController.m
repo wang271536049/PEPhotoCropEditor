@@ -90,17 +90,17 @@ static inline NSString *PELocalizedString(NSString *key, NSString *comment)
                                                                                            target:self
                                                                                            action:@selector(done:)];
 
-    if (!self.toolbarItems) {
-        UIBarButtonItem *flexibleSpace = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFlexibleSpace
-                                                                                       target:nil
-                                                                                       action:nil];
-        UIBarButtonItem *constrainButton = [[UIBarButtonItem alloc] initWithTitle:PELocalizedString(@"Constrain", nil)
-                                                                            style:UIBarButtonItemStyleBordered
-                                                                           target:self
-                                                                           action:@selector(constrain:)];
-        self.toolbarItems = @[flexibleSpace, constrainButton, flexibleSpace];
-    }
-    self.navigationController.toolbarHidden = self.toolbarHidden;
+//    if (!self.toolbarItems) {
+//        UIBarButtonItem *flexibleSpace = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFlexibleSpace
+//                                                                                       target:nil
+//                                                                                       action:nil];
+//        UIBarButtonItem *constrainButton = [[UIBarButtonItem alloc] initWithTitle:PELocalizedString(@"Constrain", nil)
+//                                                                            style:UIBarButtonItemStyleBordered
+//                                                                           target:self
+//                                                                           action:@selector(constrain:)];
+//        self.toolbarItems = @[flexibleSpace, constrainButton, flexibleSpace];
+//    }
+    self.navigationController.toolbarHidden =YES;// self.toolbarHidden;
     
     self.cropView.image = self.image;
     
